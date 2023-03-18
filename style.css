@@ -239,4 +239,18 @@ body {
         background-position: center;
     
     }
+    
+    header { 
+    
+    top: 10px;
+  
+    
+}
+
+.mensaje { 
+   
+    bottom: 10px;
+  
+}
+
 }
