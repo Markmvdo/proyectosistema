@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+:root {
+    --colorgeneral: #143249;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+header { 
+    font-family: 'Sono', sans-serif;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mensaje { 
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    bottom: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: .7em;
+}
+
+
+.mensaje a {
+    text-decoration: none;
+    color: aqua;
+
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.3em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    margin-left: 30px;
+
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnlogin {
+    width: 140px;
+    height: 60px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 800;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+
+.navigation .btnlogin:hover {
+    background: #fff;
+    color: var(--colorgeneral);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('fondoweb.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: var(--colorgeneral);
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+
+.wrapper-ocultar {
+    display: none;  
+}
+
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 30px;
+}
+
+.form-box h2 {
+    font-size: 2.4em;
+    color: var(--colorgeneral);
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--colorgeneral);
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.3em;
+    color: var(--colorgeneral);
+    font-weight: 900;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--colorgeneral);
+    line-height: 57px;
+}
+
+.recordar {
+    font-size: 1em;
+    color: var(--colorgeneral);
+    font-weight: 800;
+    margin: -15px 0 15 px;
+    display: flex;
+    justify-content: center;
+}
+
+.recordar label input {
+    accent-color: var(--colorgeneral);
+    margin-right: 3px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: var(--colorgeneral);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 510px) {
+    body {
+        min-height: 100vh;
+        background: url('fondowebmobile.jpg') no-repeat;
+        background-size: cover;
+        background-position: center; 
+    }
+}
